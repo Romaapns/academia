@@ -16,7 +16,6 @@ def main(page: ft.Page):
         alignment=ft.MainAxisAlignment.CENTER,
     )
 
-    # Dados simulados de treinos com mais exercícios
     treinos_db = {
         "Emagrecimento": {
             "Segunda-feira": ["Caminhada", "Abdominais", "Jumping jacks", "Corrida leve"],
@@ -47,7 +46,6 @@ def main(page: ft.Page):
         }
     }
 
-    # Função para exibir treinos
     def exibir_treinos(prioridade, dias_selecionados, horarios_selecionados):
         page.controls.clear()
         page.controls.append(header)
@@ -94,7 +92,6 @@ def main(page: ft.Page):
         page.controls.append(ft.ElevatedButton("Voltar", on_click=lambda _: exibir_menu(), bgcolor="purple", color="white"))
         page.update()
 
-    # Função para selecionar dias
     def selecionar_dias(prioridade):
         dias_selecionados = []
 
@@ -126,7 +123,6 @@ def main(page: ft.Page):
         page.controls.append(confirmar_button)
         page.update()
 
-    # Função para selecionar horários
     def selecionar_horarios(prioridade, dias_selecionados):
         horarios_selecionados = []
 
